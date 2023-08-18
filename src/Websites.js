@@ -5,7 +5,7 @@ const Websites = () => {
         <div>
             <p>sivut</p>
         </div>
-    )
+    );
 }
 
 export default Websites;

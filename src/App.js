@@ -10,6 +10,7 @@ import Main from "./Main";
 import Footer from "./Footer"
 import Home from "./Home";
 import Websites from "./Websites";
+import Gallery from "./Gallery";
 
 
 const App = () => {
@@ -19,22 +20,26 @@ const App = () => {
 
 
   return (
-    <div className="App">
+    <div className="app">
       <Router>
-        <div>
+        <div className="header">
           <Header />
         </div>
-        <div className="list">
+        <div className="nav">
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="page1">Page 1</Link></li>
+              <li><Link to="page2">Gallery</Link></li>
             </ul>
           </div>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="page1" element={<Websites />} />
-        </Routes>
-        <div>
+        <div className="main">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="page1" element={<Websites />} />
+            <Route exact path="page2" element={<Gallery />}></Route>
+          </Routes>
+        </div>
+        <div className="footer">
           <Footer />
         </div>
       </Router>

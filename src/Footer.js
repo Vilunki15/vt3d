@@ -2,20 +2,16 @@ import React from "react";
 
 const Footer = () => {
 
-    return(
+/*     return(
         <div>
             <h2>Footer</h2>
         </div>
-    );
+    ); */
 
 
-
-
-
-
-    /* return (
+    return (
         <div className="footer">
-            <Footer>
+            <footer>
                 <div className="container-left">
                     <ul>
                         <li className="footer-item">foo</li>
@@ -26,9 +22,9 @@ const Footer = () => {
                         <li className="footer-item">bar</li>
                     </ul>
                 </div>
-            </Footer>
+            </footer>
         </div>
-    ) */
+    )
 }
 
 export default Footer;
