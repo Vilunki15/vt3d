@@ -3,7 +3,7 @@ import React from "react";
 const Websites = () => {
     return(
         <div>
-            <h1>sviuut</h1>
+            <p>sivut</p>
         </div>
     )
 }
