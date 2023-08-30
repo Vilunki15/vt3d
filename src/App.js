@@ -11,13 +11,21 @@ import Footer from "./Footer"
 import Home from "./Home";
 import Websites from "./Websites";
 import Gallery from "./Gallery";
+import NoPage from "./NoPage";
 
 
 const App = () => {
-  //const [ isCookiesAccepted, setCookiesAccepted ] = useState(false);
-  //const [ isCookiesPrompted, setCookiesPrompted ] = useState(false);
-
-
+  //useStates for cookies. 
+  const [ isCookiesAccepted, setCookiesAccepted ] = useState(false);
+  const [ isCookiesPrompted, setCookiesPrompted ] = useState(false);
+  //cookie component hide or show. Hidden when clicked
+  let cookiePrompt;
+  if (isCookiesPrompted === false) {
+    cookiePrompt = <CookiePrompt setCookiesAccepted={setCookiesAccepted} setCookiesPrompted={setCookiesPrompted} />
+  }
+  else if (isCookiesPrompted === true) {
+    cookiePrompt = null
+  }
 
   return (
     <div className="app">
@@ -27,16 +35,20 @@ const App = () => {
         </div>
         <div className="nav">
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="page1">Page 1</Link></li>
-              <li><Link to="page2">Gallery</Link></li>
+              <li><Link to="/">Etusivu</Link></li>
+              <li><Link to="työgalleria">Työgalleria</Link></li>
+              <li><Link to="nettisivut">Nettisivut</Link></li>
             </ul>
           </div>
+        <div className="cookies">
+          {cookiePrompt}
+        </div>
         <div className="main">
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="page1" element={<Websites />} />
-            <Route exact path="page2" element={<Gallery />}></Route>
+            <Route exact path="työgalleria" element={<Gallery />} />
+            <Route exact path="nettisivut" element={<Websites />}></Route>
+            <Route path="*" element={<NoPage />} />
           </Routes>
         </div>
         <div className="footer">
@@ -45,91 +57,6 @@ const App = () => {
       </Router>
     </div>
   );
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*   return (
-    <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-        </ul>
-
-        <hr />
-
-        
-         
-       
-        <Routes>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <Websites />
-          </Route>
-          
-        </Routes>
-      </div>
-    </Router>
-  );
- */
-/*   return(
-    <Router>
-      <div>
-        <Header />
-        <hr />
-        <switch>
-          <Route exact path="/"><Home /></Route>
-        </switch>
-      </div>
-    </Router>
-  ) */
-
-
-
-
-
-
-/* return(
-  <div>
-    <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="websites" element={<Websites />}></Route>
-      </Routes>
-    </BrowserRouter>
-  </div>
-)
- */
-/*   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Header />}>
-          <Route index element={<Home />} />
-          <Route path="blogs" element={<Websites />} />
-          <Route path="contact" element={<Footer />} />
-        </Route>
-      </Routes>    
-    </BrowserRouter> 
-  ) */
 }
 
 export default App;
