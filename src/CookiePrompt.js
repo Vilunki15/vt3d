@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cookies.css';
 
 const CookiePrompt = ({ setCookiesAccepted, setCookiesPrompted }) => {
     //This component uses parent component usestates. The component usage looks this:

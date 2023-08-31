@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div className="app">
       <Router>
-        <div className="header">
+        <div className="header" style={{ overflow: 'hidden' }}>
           <Header />
         </div>
         <div className="nav">
@@ -51,6 +51,7 @@ const App = () => {
             <Route path="*" element={<NoPage />} />
           </Routes>
         </div>
+        <div className="empty-space"></div>
         <div className="footer">
           <Footer />
         </div>
