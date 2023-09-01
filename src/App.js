@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div className="app">
       <Router>
-        <div className="header" style={{ overflow: 'hidden' }}>
+        <div className="header" >
           <Header />
         </div>
         <div className="nav">

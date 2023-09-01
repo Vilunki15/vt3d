@@ -9,9 +9,13 @@ img {
     display: block;
     min-width: 100%;
 }
-.empty-space {
-    height: 100vh; /* Tämä täyttää koko näytön korkeuden */
-  }
-  .header {
-    will-change: transform;
-  }
+
+.header {
+  width: 100%;
+  height: 900px;
+  overflow: hidden; /* Lisää tähän overflow-sääntö */
+}
+.content {
+  width: 100%;
+  height: 100vh;
+}
