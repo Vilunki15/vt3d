@@ -5,17 +5,7 @@ body {
 
 
 img {
-    max-width: 100%;
-    display: block;
-    min-width: 100%;
-}
-
-.header {
-  width: 100%;
-  height: 900px;
-  overflow: hidden; /* Lisää tähän overflow-sääntö */
-}
-.content {
-  width: 100%;
-  height: 100vh;
+  max-width: 100%;
+  display: block;
+  min-width: 100%;
 }

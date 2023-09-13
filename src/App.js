@@ -5,13 +5,14 @@ import { useForm } from 'react-hook-form';
 import { FaReact } from 'react-icons/fa';
 import { useSpring, animated } from 'react-spring';
 import CookiePrompt from "./CookiePrompt";
-import Header from "./Header";
+//import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer"
 import Home from "./Home";
 import Websites from "./Websites";
 import Gallery from "./Gallery";
 import NoPage from "./NoPage";
+import Header from "./FixedHeader"
 
 
 const App = () => {

@@ -7,6 +7,35 @@ import "./App.css";
 
 
 
+const Hiider = () => {
+  return (
+    <div>
+      <img src={logo} alt="Header"/>
+    </div>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const PlaaHeader = () => {
   const [springProps, setSpringProps] = useSpring(() => ({
@@ -124,7 +153,7 @@ const TestHeader = () => {
 
 
 
-const Header = () => {
+/* const Header = () => {
     const [{ y }, set] = useSpring(() => ({ y: 0 }));
     const handleScroll = () => {
         set({ y: window.scrollY});
@@ -151,6 +180,6 @@ const Header = () => {
         </animated.div>
       );
 
-}
+} */
 
-export default Header;
+export default Hiider;
