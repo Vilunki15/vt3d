@@ -52,7 +52,6 @@ const App = () => {
             <Route path="*" element={<NoPage />} />
           </Routes>
         </div>
-        <div className="empty-space"></div>
         <div className="footer">
           <Footer />
         </div>
