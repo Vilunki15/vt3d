@@ -9,3 +9,22 @@ img {
   display: block;
   min-width: 100%;
 }
+
+
+
+
+
+
+
+
+.mobile-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mobile-flex-item {
+  flex: 1;
+  border: 3px solid red;
+  text-align: left;
+  max-width: 25%;
+  background-color: beige;
+}

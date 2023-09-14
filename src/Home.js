@@ -1,4 +1,6 @@
 import React from "react";
+import { DesktopResinTable, MobileResinTable, DesktopFilamentTable, MobileFilamentTable } from "./Tables";
+
 
 const Home = () => {
     return(
@@ -14,7 +16,10 @@ const Home = () => {
                 <li>FDM, eli muovin pursotuitus suuttimen läpi</li>
                 <li>MSLA, eli hartsin kovettamista UV-valolla</li>
             </ul>
-
+            <MobileFilamentTable />
+            <DesktopFilamentTable />
+            <DesktopResinTable />
+            <MobileResinTable />
         </div>
     );
 }
