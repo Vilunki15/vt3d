@@ -1,8 +1,8 @@
 import { React } from "react";     
-import HeaderUHD from "./HeaderUHD"
-import HeaderQHD from "./HeaderQHD"
-import HeaderFHD from "./HeaderFHD"
-import HeaderHD from "./HeaderHD"
+import HeaderUHD from "./Headers/HeaderUHD"
+import HeaderQHD from "./Headers/HeaderQHD"
+import HeaderFHD from "./Headers/HeaderFHD"
+import HeaderHD from "./Headers/HeaderHD"
 
 
 const Header = () => {
