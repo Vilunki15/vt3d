@@ -1,5 +1,5 @@
 import React from "react";
-import { DesktopResinTable, MobileResinTable, DesktopFilamentTable, MobileFilamentTable } from "./Tables";
+import { DesktopResinTable, MobileResinTable, DesktopFilamentTable, MobileFilamentTable, DesktopPrinterTable, MobilePrinterTable } from "./Tables";
 
 
 const Home = () => {
@@ -16,6 +16,8 @@ const Home = () => {
                 <li>FDM, eli muovin pursotuitus suuttimen läpi</li>
                 <li>MSLA, eli hartsin kovettamista UV-valolla</li>
             </ul>
+            <MobilePrinterTable />
+            <DesktopPrinterTable />
             <MobileFilamentTable />
             <DesktopFilamentTable />
             <DesktopResinTable />

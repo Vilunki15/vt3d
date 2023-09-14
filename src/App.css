@@ -28,3 +28,7 @@ img {
   max-width: 25%;
   background-color: beige;
 }
+
+.dropdown-button::first-letter {
+  text-transform: uppercase;
+}

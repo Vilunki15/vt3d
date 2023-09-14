@@ -52,7 +52,7 @@ export const MobileResinTable = () => {
         <div>
             {Object.keys(isMenuOpen).map((material, index) => (
                 <div key={material}>
-                    <button onClick={() => toggleMenu(material)}>{material}</button>
+                    <button className="dropdown-button" onClick={() => toggleMenu(material)}>{material}</button>
                         {isMenuOpen[material] && (
                             <div className="mobile-flex-container">
                                 <div className="mobile-flex-item">
@@ -141,7 +141,7 @@ export const MobileFilamentTable = () => {
         <div>
             {Object.keys(isMenuOpen).map((material, index) => (
                 <div key={material}>
-                    <button onClick={() => toggleMenu(material)}>{material}</button>
+                    <button className="dropdown-button" onClick={() => toggleMenu(material)}>{material}</button>
                         {isMenuOpen[material] && (
                             <div className="mobile-flex-container">
                                 <div className="mobile-flex-item">
@@ -166,20 +166,73 @@ export const MobileFilamentTable = () => {
     );
 };
 
+/* Printers */
 
+const PTable = [
+    ["Tulostin", "XY Tarkkuus", "Z Tarkkuus", "Yksityiskohdat", "Kestävyys", "Materiaali"],
+    ["MSLA", "0.035mm", "0.001mm", "Erittäin hieno", "Kohtalainen-Hyvä", "Hartsi"],
+    ["FDM", "0.2-1mm", "0.12-0.4mm", "Hieno", "Hyvä-Erittäin hyvä", "Muovi"]
+]
 
+export const DesktopPrinterTable = () => {
+    return(
+        <table className="filament-table">
+            <thead>
+                <tr>
+                    {PTable[0].map((header, index) => (
+                        <th key={index}>{header}</th>
+                    ))}
+                </tr>
+            </thead>
+            <tbody>
+                {PTable.slice(1).map((row, rowIndex) => (
+                    <tr key={rowIndex}>
+                        {row.map((cell, cellIndex) => (
+                            <td key={cellIndex}>{cell}</td>
+                        ))}
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    );
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export const MobilePrinterTable = () => {
+    const [ isMenuOpen, setMenuOpen ] = useState({
+        msla : false,
+        fdm : false
+    });
+    const toggleMenu = (menu) => {
+        setMenuOpen((prevState) => ({
+            ...prevState,
+            [menu]: !prevState[menu],
+        }));
+    };
+    return (
+        <div>
+            {Object.keys(isMenuOpen).map((material, index) => (
+                <div key={material}>
+                    <button className="dropdown-button" onClick={() => toggleMenu(material)}>{material}</button>
+                        {isMenuOpen[material] && (
+                            <div className="mobile-flex-container">
+                                <div className="mobile-flex-item">
+                                    <ul>
+                                        {PTable[0].slice(1).map((item, itemIndex) => (
+                                            <li key={itemIndex}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="mobile-flex-item">
+                                    <ul>
+                                        {PTable[index + 1].slice(1).map((item, itemIndex) => (
+                                            <li key={itemIndex}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
+                </div>
+            ))}
+        </div>
+    );
+}

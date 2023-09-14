@@ -4,7 +4,6 @@ import HeaderQHD from "./Headers/HeaderQHD"
 import HeaderFHD from "./Headers/HeaderFHD"
 import HeaderHD from "./Headers/HeaderHD"
 
-
 const Header = () => {
     let screenWidth = window.innerWidth;
     let headerIMG;
