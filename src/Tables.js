@@ -5,7 +5,7 @@ import "./App.scss"
 /* Resins */
 
 const RTable = [
-    ["Materiaali", "Kestävyys", "Sitkeys", "Shore", "Lämmönkestävyys", "Hauraus", "Hinta"],
+    ["Materiaali", "Kestävyys", "Sitkeys", "Shore", "Lämmön kestävyys", "Hauraus", "Hinta"],
     ["Standard", 3.5, 3.5, "D65-D90", 3.5, 3, "40-80"],
     ["Kova", 4.5, 4.5, "D68-D82", 4, 4, "80-200"],
     ["Joustava", 4, 5, "A43-A82", 3.5, 5, "50-250"],
@@ -14,18 +14,18 @@ const RTable = [
 
 export const DesktopResinTable = () => {
     return(
-        <div className="laatikko">
+        <div className="moii">
         <table className="resin-table">
-            <thead className="paa">
-                <tr>
+            <thead>
+                <tr className="laatikko">
                     {RTable[0].map((header, index) => (
                         <th className="testi" key={index}>{header}</th>
                     ))}
                 </tr>
             </thead>
-            <tbody className="paa">
+            <tbody>
                 {RTable.slice(1).map((row, rowIndex) => (
-                    <tr key={rowIndex}>
+                    <tr className="laatikko" key={rowIndex}>
                         {row.map((cell, cellIndex) => (
                             <td className ="testi" key={cellIndex}>{cell}</td>
                         ))}
@@ -100,17 +100,17 @@ export const DesktopFilamentTable = () => {
     return(
         <table className="filament-table">
             <thead>
-                <tr>
+                <tr className="laatikko">
                     {FTable[0].map((header, index) => (
-                        <th key={index}>{header}</th>
+                        <th className="testi" key={index}>{header}</th>
                     ))}
                 </tr>
             </thead>
             <tbody>
                 {FTable.slice(1).map((row, rowIndex) => (
-                    <tr key={rowIndex}>
+                    <tr className="laatikko" key={rowIndex}>
                         {row.map((cell, cellIndex) => (
-                            <td key={cellIndex}>{cell}</td>
+                            <td className="testi" key={cellIndex}>{cell}</td>
                         ))}
                     </tr>
                 ))}
@@ -180,17 +180,17 @@ export const DesktopPrinterTable = () => {
     return(
         <table className="printer-table">
             <thead>
-                <tr>
+                <tr className="laatikko">
                     {PTable[0].map((header, index) => (
-                        <th key={index}>{header}</th>
+                        <th className="testi" key={index}>{header}</th>
                     ))}
                 </tr>
             </thead>
             <tbody>
                 {PTable.slice(1).map((row, rowIndex) => (
-                    <tr key={rowIndex}>
+                    <tr className="laatikko" key={rowIndex}>
                         {row.map((cell, cellIndex) => (
-                            <td key={cellIndex}>{cell}</td>
+                            <td className="testi" key={cellIndex}>{cell}</td>
                         ))}
                     </tr>
                 ))}

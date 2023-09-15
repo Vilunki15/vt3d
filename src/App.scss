@@ -1,8 +1,25 @@
+$text: #333333;
+$backround: #F5F5F5;
+$primary: #FB6800;
+$secondary: #023E8A;
+$accent: #22B14C;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 body {
-  background-color: aquamarine;
+  background-color: $backround;
+  color: $text;
   margin: 0 0;
 }
 
@@ -13,26 +30,28 @@ img {
 }
 .laatikko {
   display: flex;
-  border: 3px solid red;
+  width: 900px;
+  margin: 0;
   flex-wrap: wrap;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .testi {
   flex: 1;
-  border: 3px solid blue;
-  justify-content: space-between;
+  border: 1px solid $secondary;
+  margin: 0;
+  color: $backround;
 }
-
-
+.moii {
+  background-color: $primary;
+}
 
 
 
 .main-body {
-  max-width: 1024px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  align-items: center;
 }
 
 
