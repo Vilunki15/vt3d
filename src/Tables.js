@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./App.css"
+import "./App.scss"
 
 /* Resins */
 
@@ -14,24 +14,26 @@ const RTable = [
 
 export const DesktopResinTable = () => {
     return(
+        <div className="laatikko">
         <table className="resin-table">
-            <thead>
+            <thead className="paa">
                 <tr>
                     {RTable[0].map((header, index) => (
-                        <th key={index}>{header}</th>
+                        <th className="testi" key={index}>{header}</th>
                     ))}
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="paa">
                 {RTable.slice(1).map((row, rowIndex) => (
                     <tr key={rowIndex}>
                         {row.map((cell, cellIndex) => (
-                            <td key={cellIndex}>{cell}</td>
+                            <td className ="testi" key={cellIndex}>{cell}</td>
                         ))}
                     </tr>
                 ))}
             </tbody>
         </table>
+        </div>
     );
 };
 
@@ -176,7 +178,7 @@ const PTable = [
 
 export const DesktopPrinterTable = () => {
     return(
-        <table className="filament-table">
+        <table className="printer-table">
             <thead>
                 <tr>
                     {PTable[0].map((header, index) => (

@@ -1,10 +1,15 @@
 import React from "react";
-import { DesktopResinTable, MobileResinTable, DesktopFilamentTable, MobileFilamentTable, DesktopPrinterTable, MobilePrinterTable } from "./Tables";
-
+import "./App.scss";
+import { DesktopResinTable, 
+    MobileResinTable, 
+    DesktopFilamentTable, 
+    MobileFilamentTable, 
+    DesktopPrinterTable, 
+    MobilePrinterTable } from "./Tables";
 
 const Home = () => {
     return(
-        <div>
+        <div className="home">
             <h1>VT3D - 3D-tulostus ja mallinnuspalvelut</h1>
             <h2>Tervetuloa VT3D:n nettisivuille!</h2>
             <p>Olemme pieni 3D-tulostus ja mallinnuspaja Oulusta (muutamme kohta). <br/>
@@ -16,12 +21,12 @@ const Home = () => {
                 <li>FDM, eli muovin pursotuitus suuttimen läpi</li>
                 <li>MSLA, eli hartsin kovettamista UV-valolla</li>
             </ul>
-            <MobilePrinterTable />
+            {/* <MobilePrinterTable /> */}
             <DesktopPrinterTable />
-            <MobileFilamentTable />
+            {/* <MobileFilamentTable /> */}
             <DesktopFilamentTable />
             <DesktopResinTable />
-            <MobileResinTable />
+            {/* <MobileResinTable /> */}
         </div>
     );
 }
