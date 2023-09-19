@@ -1,20 +1,28 @@
 import React from "react";
 import { useState } from "react";
 import "./App.sass"
+import { BsFillCheckSquareFill as CheckMark,
+    Bs1SquareFill as One,
+    Bs2SquareFill as Two,
+    Bs3SquareFill as Three,
+    Bs4SquareFill as Four,
+    Bs5SquareFill as Five
+} from "react-icons/bs"
 
 /* Resins */
 
 const RTable = [
-    ["Materiaali", "Kestävyys", "Sitkeys", "Shore", "Lämmön kestävyys", "Hauraus", "Hinta"],
-    ["Standard", 3.5, 3.5, "D65-D90", 3.5, 3, "40-80"],
-    ["Kova", 4.5, 4.5, "D68-D82", 4, 4, "80-200"],
-    ["Joustava", 4, 5, "A43-A82", 3.5, 5, "50-250"],
-    ["Valettava", 3, 3, "D64", "", 4, "120-300"]
+    ["Materiaali", "Kestävyys", "Sitkeys", "Shore", "Lämmön kestävyys", "Biohajoava", "Hinta"],
+    ["Standard", <Three />, <Three />, "D65-D90", <Four />, "", "40-80"],
+    ["Kova", <Five />, <Five />, "D68-D82", <Four />, "", "80-200"],
+    ["Joustava", <Four />, <Five />, "A43-A82", <Four />, "", "50-250"],
+    ["Valettava", <Three />, <Three />, "D64", "", "", "120-300"]
 ];
+
 
 export const DesktopResinTable = () => {
     return(
-        <div className="moii">
+        
         <table className="resin-table">
             <thead>
                 <tr className="laatikko">
@@ -33,7 +41,7 @@ export const DesktopResinTable = () => {
                 ))}
             </tbody>
         </table>
-        </div>
+        
     );
 };
 
@@ -83,18 +91,19 @@ export const MobileResinTable = () => {
 
 const FTable = [
     ["Materiaali", "Kestävyys", "Yksityiskohdat", "UV-Kestävyys", "Lämmön kestävyys", "Biohajoava", "Hinta"],
-    ["PLA", 3, 5, 2, 2, "x", "20-40"],
-    ["PETG", 4, 4.5, 3.5, 3.5, "", "20-40"],
-    ["PCTG", 4.5, 4.5, 4, 4, "", "30-50"],
-    ["ABS", 5, 4.5, 4, 4.5, "", "20-50"],
-    ["ASA", 4.5, 4.5, 5, 4.5, "", "20-50"],
-    ["TPU", 5, 3, 4.5, 3.5, "", "30-80"],
-    ["Puu", 2.5, 4.5, 2, 2, "x", "60-100"],
-    ["Nylon", 5, 4.5, 5, 5, "", "60-150"],
-    ["Kivi", 3, 4.5, 2, 2, "x", "30-80"],
-    ["Hohtava", 4, 4.5, 3.5, 3.5, "", "30-60"],
-    ["HIPS", 4.5, 4.5, "", 4.5, "", "20-80"]
+    ["PLA", <Three />, <Five />, <Two />, <Two />, <CheckMark />, "20-40"],
+    ["PETG", <Four />, <Four />, <Four />, <Three />, "", "20-40"],
+    ["PCTG", <Five />, <Four />, <Four />, <Four />, "", "30-50"],
+    ["ABS", <Five />, <Four />, <Four />, <Four />, "", "20-50"],
+    ["ASA", <Five />, <Four />, <Five />, <Four />, "", "20-50"],
+    ["TPU", <Five />, <Three />, <Four />, <Three />, "", "30-80"],
+    ["Puu", <Two />, <Five />, <Two />, <Two />, <CheckMark />, "60-100"],
+    ["Nylon", <Five />, <Four />, <Five />, <Five />, "", "60-150"],
+    ["Kivi", <Three />, <Five />, <Two />, <Two />, <CheckMark />, "30-80"],
+    ["Hohtava", <Four />, <Five />, <Four />, <Three />, "", "30-60"],
+    ["HIPS", <Three />, <Four />, "", <Four />, "", "20-80"]
 ];
+
 
 export const DesktopFilamentTable = () => {
     return(
