@@ -13,7 +13,7 @@ import Gallery from "./Gallery";
 import NoPage from "./NoPage";
 import Header from "./FixedHeader"
 import Materials from "./Materials";
-import "./App.scss";
+import "./App.sass";
 
 
 const App = () => {
