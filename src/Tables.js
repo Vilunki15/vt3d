@@ -84,7 +84,7 @@ export const MobileResinTable = () => {
                 </div>
             ))}
         </div>
-    );
+    );                 
 };
 
 /* Filaments */
@@ -103,7 +103,20 @@ const FTable = [
     ["Hohtava", <Four />, <Five />, <Four />, <Three />, "", "30-60"],
     ["HIPS", <Three />, <Four />, "", <Four />, "", "20-80"]
 ];
-
+const FMTable = [
+    ["Materiaali", "Kestävyys", "Yksityiskohdat", "UV-Kestävyys", "Lämmön kestävyys", "Biohajoava", "Hinta"],
+    ["PLA", 3, 5, 2, 2, "Kyllä", "20-40"],
+    ["PETG", 4, 4, 4, 3, "Ei", "20-40"],
+    ["PCTG", 5, 4, 4, 4, "Ei", "30-50"],
+    ["ABS", 5, 4, 4, 4, "Ei", "20-50"],
+    ["ASA", 5, 4, 5, 4, "Ei", "20-50"],
+    ["TPU", 5, 3, 4, 3, "Ei", "30-80"],
+    ["Puu", 2, 5, 2, 2, "Kyllä", "60-100"],
+    ["Nylon", 5, 4, 5, 5, "Ei", "60-150"],
+    ["Kivi", 3, 5, 2, 2, "Kyllä", "30-80"],
+    ["Hohtava", 4, 5, 4, 3, "Ei", "30-60"],
+    ["HIPS", 3, 4, "", 4, "Ei", "20-80"]
+];
 
 export const DesktopFilamentTable = () => {
     return(
@@ -157,14 +170,14 @@ export const MobileFilamentTable = () => {
                             <div className="mobile-flex-container">
                                 <div className="mobile-flex-item">
                                     <ul>
-                                        {FTable[0].slice(1).map((item, itemIndex) => (
+                                        {FMTable[0].slice(1).map((item, itemIndex) => (
                                             <li key={itemIndex}>{item}</li>
                                         ))}
                                     </ul>
                                 </div>
                                 <div className="mobile-flex-item">
                                     <ul>
-                                        {FTable[index + 1].slice(1).map((item, itemIndex) => (
+                                        {FMTable[index + 1].slice(1).map((item, itemIndex) => (
                                             <li key={itemIndex}>{item}</li>
                                         ))}
                                     </ul>

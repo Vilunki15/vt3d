@@ -40,7 +40,7 @@ const App = () => {
               <li><Link to="/">Etusivu</Link></li>
               <li><Link to="työgalleria">Työgalleria</Link></li>
               {/* <li><Link to="nettisivut">Nettisivut</Link></li> */}
-              <li><Link to="materiaalit">Materiaalit ja tulostustekniikat</Link></li>
+              {/* <li><Link to="materiaalit">Materiaalit ja tulostustekniikat</Link></li> */}
             </ul>
           </div>
         <div className="cookies">
@@ -51,7 +51,7 @@ const App = () => {
             <Route exact path="/" element={<Home />} />
             <Route exact path="työgalleria" element={<Gallery />} />
             {/* <Route exact path="nettisivut" element={<Websites />}></Route> */}
-            <Route exact path="materiaalit" element={<Materials />} />
+            {/* <Route exact path="materiaalit" element={<Materials />} /> */}
             <Route path="*" element={<NoPage />} />
           </Routes>
         </div>

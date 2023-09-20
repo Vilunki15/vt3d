@@ -1,29 +1,24 @@
 import React from "react";
+import "./App.sass";
 
 const Footer = () => {
-
-/*     return(
-        <div>
-            <h2>Footer</h2>
-        </div>
-    ); */
-
-
     return (
-        <div className="footer">
-            <footer>
-                <div className="container-left">
+        <footer>
+            <div className="footer-main">
+                <div className="footer-container">
                     <ul>
-                        <li className="footer-item">foo</li>
+                        <li className="footer-item">VT3D</li>
+                        <li className="footer-item">Website made with React.js</li>
                     </ul>
                 </div>
-                <div className="container-rigth">
+                <div className="footer-container">
                     <ul>
-                        <li className="footer-item">bar</li>
+                        <li className="footer-item">Y-Tunnus: 3380624-6</li>
+                        <li className="footer-item"><a href="https://github.com/Vilunki15" target="_blanck">GitHub</a></li>
                     </ul>
                 </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
     )
 }
 
