@@ -18,7 +18,13 @@ const RTable = [
     ["Joustava", <Four />, <Five />, "A43-A82", <Four />, "", "50-250"],
     ["Valettava", <Three />, <Three />, "D64", "", "", "120-300"]
 ];
-
+const RMTable = [
+    ["Materiaali", "Kestävyys", "Sitkeys", "Shore", "Lämmön kestävyys", "Hauraus", "Hinta"],
+    ["Standard", 3, 3, "D65-D90", 4, 3, "40-80"],
+    ["Kova", 5, 5, "D68-D82", 4, 4, "80-200"],
+    ["Joustava", 4, 5, "A43-A82", 4, 5, "50-250"],
+    ["Valettava", 3, 3, "D64", "", 4, "120-300"]
+];
 
 export const DesktopResinTable = () => {
     return(
@@ -67,14 +73,14 @@ export const MobileResinTable = () => {
                             <div className="mobile-flex-container">
                                 <div className="mobile-flex-item">
                                     <ul>
-                                        {RTable[0].slice(1).map((item, itemIndex) => (
+                                        {RMTable[0].slice(1).map((item, itemIndex) => (
                                             <li key={itemIndex}>{item}</li>
                                         ))}
                                     </ul>
                                 </div>
                                 <div className="mobile-flex-item">
                                     <ul>
-                                        {RTable[index + 1].slice(1).map((item, itemIndex) => (
+                                        {RMTable[index + 1].slice(1).map((item, itemIndex) => (
                                             <li key={itemIndex}>{item}</li>
                                         ))}
                                     </ul>
