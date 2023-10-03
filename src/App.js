@@ -2,8 +2,6 @@ import React from "react";
 import { ReactDOM, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useForm } from 'react-hook-form';
-import { FaReact } from 'react-icons/fa';
-import { useSpring, animated } from 'react-spring';
 import CookiePrompt from "./CookiePrompt";
 //import Header from "./Header";
 import Footer from "./Footer"
@@ -40,7 +38,7 @@ const App = () => {
               <li><Link to="/">Etusivu</Link></li>
               <li><Link to="työgalleria">Työgalleria</Link></li>
               {/* <li><Link to="nettisivut">Nettisivut</Link></li> */}
-              {/* <li><Link to="materiaalit">Materiaalit ja tulostustekniikat</Link></li> */}
+              <li><Link to="materiaalit">Materiaalit ja tulostustekniikat</Link></li>
             </ul>
           </div>
         <div className="cookies">
@@ -51,7 +49,7 @@ const App = () => {
             <Route exact path="/" element={<Home />} />
             <Route exact path="työgalleria" element={<Gallery />} />
             {/* <Route exact path="nettisivut" element={<Websites />}></Route> */}
-            {/* <Route exact path="materiaalit" element={<Materials />} /> */}
+            <Route exact path="materiaalit" element={<Materials />} />
             <Route path="*" element={<NoPage />} />
           </Routes>
         </div>

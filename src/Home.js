@@ -40,14 +40,14 @@ const Home = () => {
                 <li>FDM, eli muovin pursotuitus suuttimen läpi</li>
                 <li>MSLA, eli hartsin kovettamista UV-valolla</li>
             </ul>
-            <h2>Tässä vertailtuna tulostustekniikat:</h2>
-            <p>(Huom, nämä ovat vain arvioita ja todellinen lopputulos riippuu kappaleesta <br/> 
-            sekä asiakkaan toiveista).</p>
-            { printerTable }
-            <h2>FDM-tekniikan materiaalit:</h2>            
-            { filamentTable }
-            <h2>MSLA-tekniikan materiaalit:</h2>
-            { resinTable }
+            <h3>Toimitus:</h3>
+            <p>Toimitusvaihtoehtoina ovat postipaketti ja nouto. <br/>
+            Nouto tapahtuu Oulusta. Siitä sovittava tarkemmin. <br/>
+            Muussa tapauksessa toimitus kotimaahan käyttäen seuraavia palveluita:</p>
+            <ul>
+                <li>Matkahuolto</li>
+                <li>Posti</li>
+            </ul>
         </div>
     );
 }

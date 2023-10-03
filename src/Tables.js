@@ -23,7 +23,7 @@ const RMTable = [
     ["Standard", 3, 3, "D65-D90", 4, 3, "40-80"],
     ["Kova", 5, 5, "D68-D82", 4, 4, "80-200"],
     ["Joustava", 4, 5, "A43-A82", 4, 5, "50-250"],
-    ["Valettava", 3, 3, "D64", "", 4, "120-300"]
+    ["Valettava", 3, 3, "D64", "Ei", 4, "120-300"]
 ];
 
 export const DesktopResinTable = () => {
@@ -47,7 +47,6 @@ export const DesktopResinTable = () => {
                 ))}
             </tbody>
         </table>
-        
     );
 };
 
@@ -71,14 +70,14 @@ export const MobileResinTable = () => {
                     <button className="dropdown-button" onClick={() => toggleMenu(material)}>{material}</button>
                         {isMenuOpen[material] && (
                             <div className="mobile-flex-container">
-                                <div className="mobile-flex-item">
+                                <div className="mobile-flex-item-left">
                                     <ul>
                                         {RMTable[0].slice(1).map((item, itemIndex) => (
                                             <li key={itemIndex}>{item}</li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="mobile-flex-item">
+                                <div className="mobile-flex-item-rigth">
                                     <ul>
                                         {RMTable[index + 1].slice(1).map((item, itemIndex) => (
                                             <li key={itemIndex}>{item}</li>
@@ -106,8 +105,7 @@ const FTable = [
     ["Puu", <Two />, <Five />, <Two />, <Two />, <CheckMark />, "60-100"],
     ["Nylon", <Five />, <Four />, <Five />, <Five />, "", "60-150"],
     ["Kivi", <Three />, <Five />, <Two />, <Two />, <CheckMark />, "30-80"],
-    ["Hohtava", <Four />, <Five />, <Four />, <Three />, "", "30-60"],
-    ["HIPS", <Three />, <Four />, "", <Four />, "", "20-80"]
+    ["Hohtava", <Four />, <Five />, <Four />, <Three />, "", "30-60"]
 ];
 const FMTable = [
     ["Materiaali", "Kestävyys", "Yksityiskohdat", "UV-Kestävyys", "Lämmön kestävyys", "Biohajoava", "Hinta"],
@@ -120,8 +118,7 @@ const FMTable = [
     ["Puu", 2, 5, 2, 2, "Kyllä", "60-100"],
     ["Nylon", 5, 4, 5, 5, "Ei", "60-150"],
     ["Kivi", 3, 5, 2, 2, "Kyllä", "30-80"],
-    ["Hohtava", 4, 5, 4, 3, "Ei", "30-60"],
-    ["HIPS", 3, 4, "", 4, "Ei", "20-80"]
+    ["Hohtava", 4, 5, 4, 3, "Ei", "30-60"]
 ];
 
 export const DesktopFilamentTable = () => {
@@ -158,8 +155,7 @@ export const MobileFilamentTable = () => {
         puu : false,
         nylon : false,
         kivi : false,
-        hohtava : false,
-        hips : false
+        hohtava : false
     });
     const toggleMenu = (menu) => {
         setMenuOpen((prevState) => ({
@@ -200,8 +196,8 @@ export const MobileFilamentTable = () => {
 
 const PTable = [
     ["Tulostin", "XY Tarkkuus", "Z Tarkkuus", "Yksityiskohdat", "Kestävyys", "Materiaali"],
-    ["MSLA", "0.035mm", "0.001mm", "Erittäin hieno", "Kohtalainen-Hyvä", "Hartsi"],
-    ["FDM", "0.2-1mm", "0.12-0.4mm", "Hieno", "Hyvä-Erittäin hyvä", "Muovi"]
+    ["MSLA", "0.035mm", "0.001mm", "Erittäin hieno", "OK-Hyvä", "Hartsi"],
+    ["FDM", "0.2-1mm", "0.12-0.4mm", "Hieno", "Hyvä", "Muovi"]
 ]
 
 export const DesktopPrinterTable = () => {
