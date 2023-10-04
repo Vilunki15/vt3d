@@ -8,6 +8,7 @@ body
   background-color: $backround
   color: $text
   margin: 0 0
+  font-family: 'Montserrat', 'sans-serif'
 
 img
   max-width: 100%
@@ -20,7 +21,6 @@ li
   text-align: center
 
 .main-body 
-  border: 3px solid red
   text-align: left
 
 .footer-main 
@@ -31,14 +31,47 @@ li
   text-align: center
   justify-content: center
   
+.nav
+  text-align: center
+  li
+    display: inline
+    margin: 0 10px
+    background-color: $primary
+    font-size: 1.5em
+    color: $secondary
+    Link
+      width: 100px
+      height: 40px
+      display: block
+      text-align: center
       
+
+
+
+/* .nav
+  text-align: center
+  li
+    display: inline
+    margin: 0 10px
+    
+    a // Muutetaan Link-sisältöä (teksti) varten
+      display: block
+      width: 100px
+      height: 40px
+      background-color: $primary
+      text-align: center
+      line-height: 40px // Keskitetään teksti pystysuunnassa
+      color: $secondary // Tekstin väri */
+
+
+
 .footer-container
   flex: 1
   a 
     color: $backround
 
 
-.laatikko
+.desktop-container
   display: flex
   width: 900px
   margin: 0
@@ -46,7 +79,7 @@ li
   justify-content: space-evenly
   background-color: $accent
 
-.testi
+.desktop-child
   flex: 1
   border: 1px solid $text
   margin: 0
@@ -69,6 +102,7 @@ svg
   flex-wrap: wrap
   text-align: center
   justify-content: center
+  background-color: $accent
 
 .mobile-flex-item
   flex: 1

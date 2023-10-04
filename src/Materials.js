@@ -30,11 +30,13 @@ const Materials = () => {
             <p>(Huom, nämä ovat vain arvioita ja todellinen lopputulos riippuu kappaleesta <br/> 
             sekä asiakkaan toiveista).</p>
             { printerTable }
-            <h2>FDM-tekniikan materiaalit:</h2>            
+            <h2>FDM-tekniikan materiaalit:</h2>
+            <p>Asteikko 1-5</p>            
             { filamentTable }
             <h2>MSLA-tekniikan materiaalit:</h2>
+            <p>Asteikko 1-5</p>
             { resinTable }
-            <h3>Käytämme seuraavien brändien materiaaleja:</h3>
+{/*             <h3>Käytämme seuraavien brändien materiaaleja:</h3>
             <ul>
                 <li>3DJake</li>
                 <li>Anycubic</li>
@@ -50,7 +52,7 @@ const Materials = () => {
                 <li>Winkle</li>
                 <li>Fiberlogy</li>
                 <li>SunLu</li>
-            </ul>
+            </ul> */}
         </div>
     );
 };

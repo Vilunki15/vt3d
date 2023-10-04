@@ -31,17 +31,17 @@ export const DesktopResinTable = () => {
         
         <table className="resin-table">
             <thead>
-                <tr className="laatikko">
+                <tr className="desktop-container">
                     {RTable[0].map((header, index) => (
-                        <th className="testi" key={index}>{header}</th>
+                        <th className="desktop-child" key={index}>{header}</th>
                     ))}
                 </tr>
             </thead>
             <tbody>
                 {RTable.slice(1).map((row, rowIndex) => (
-                    <tr className="laatikko" key={rowIndex}>
+                    <tr className="desktop-container" key={rowIndex}>
                         {row.map((cell, cellIndex) => (
-                            <td className ="testi" key={cellIndex}>{cell}</td>
+                            <td className ="desktop-child" key={cellIndex}>{cell}</td>
                         ))}
                     </tr>
                 ))}
@@ -125,17 +125,17 @@ export const DesktopFilamentTable = () => {
     return(
         <table className="filament-table">
             <thead>
-                <tr className="laatikko">
+                <tr className="desktop-container">
                     {FTable[0].map((header, index) => (
-                        <th className="testi" key={index}>{header}</th>
+                        <th className="desktop-child" key={index}>{header}</th>
                     ))}
                 </tr>
             </thead>
             <tbody>
                 {FTable.slice(1).map((row, rowIndex) => (
-                    <tr className="laatikko" key={rowIndex}>
+                    <tr className="desktop-container" key={rowIndex}>
                         {row.map((cell, cellIndex) => (
-                            <td className="testi" key={cellIndex}>{cell}</td>
+                            <td className="desktop-child" key={cellIndex}>{cell}</td>
                         ))}
                     </tr>
                 ))}
@@ -170,14 +170,14 @@ export const MobileFilamentTable = () => {
                     <button className="dropdown-button" onClick={() => toggleMenu(material)}>{material}</button>
                         {isMenuOpen[material] && (
                             <div className="mobile-flex-container">
-                                <div className="mobile-flex-item">
+                                <div className="mobile-flex-item-left">
                                     <ul>
                                         {FMTable[0].slice(1).map((item, itemIndex) => (
                                             <li key={itemIndex}>{item}</li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="mobile-flex-item">
+                                <div className="mobile-flex-item-rigth">
                                     <ul>
                                         {FMTable[index + 1].slice(1).map((item, itemIndex) => (
                                             <li key={itemIndex}>{item}</li>
@@ -204,17 +204,17 @@ export const DesktopPrinterTable = () => {
     return(
         <table className="printer-table">
             <thead>
-                <tr className="laatikko">
+                <tr className="desktop-container">
                     {PTable[0].map((header, index) => (
-                        <th className="testi" key={index}>{header}</th>
+                        <th className="desktop-child" key={index}>{header}</th>
                     ))}
                 </tr>
             </thead>
             <tbody>
                 {PTable.slice(1).map((row, rowIndex) => (
-                    <tr className="laatikko" key={rowIndex}>
+                    <tr className="desktop-container" key={rowIndex}>
                         {row.map((cell, cellIndex) => (
-                            <td className="testi" key={cellIndex}>{cell}</td>
+                            <td className="desktop-child" key={cellIndex}>{cell}</td>
                         ))}
                     </tr>
                 ))}
