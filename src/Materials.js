@@ -26,6 +26,7 @@ const Materials = () => {
     }
     return(
         <div>
+            <h1>Vertailua erilaisista materiaaleista ja tekniikoista:</h1>
             <h2>Tässä vertailtuna tulostustekniikat:</h2>
             <p>(Huom, nämä ovat vain arvioita ja todellinen lopputulos riippuu kappaleesta <br/> 
             sekä asiakkaan toiveista).</p>

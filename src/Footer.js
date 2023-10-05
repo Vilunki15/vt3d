@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.sass";
+import filalab from "./Assets/filalab.png"
 
 const Footer = () => {
     return (
@@ -21,7 +22,7 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
-    )
+    );
 }
 
 export default Footer;

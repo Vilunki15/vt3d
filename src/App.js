@@ -38,7 +38,7 @@ const App = () => {
               <li><Link to="/">Etusivu</Link></li>
               <li><Link to="työgalleria">Työgalleria</Link></li>
               {/* <li><Link to="nettisivut">Nettisivut</Link></li> */}
-              <li><Link to="materiaalit">Materiaalit ja tulostustekniikat</Link></li>
+              <li><Link to="materiaalit">Materiaalit</Link></li>
             </ul>
           </div>
         <div className="cookies">
