@@ -13,7 +13,6 @@ import Header from "./FixedHeader"
 import Materials from "./Materials";
 import "./App.sass";
 
-
 const App = () => {
   //useStates for cookies. 
   const [ isCookiesAccepted, setCookiesAccepted ] = useState(false);
