@@ -12,6 +12,7 @@ import NoPage from "./NoPage";
 import Header from "./FixedHeader"
 import Materials from "./Materials";
 import "./App.sass";
+import Contact from './Contact'
 
 const App = () => {
   //useStates for cookies. 
@@ -38,6 +39,7 @@ const App = () => {
               <li><Link to="työgalleria">Työgalleria</Link></li>
               {/* <li><Link to="nettisivut">Nettisivut</Link></li> */}
               <li><Link to="materiaalit">Materiaalit</Link></li>
+              <li><Link to="yhteystiedot">Yhteystiedot</Link></li>
             </ul>
           </div>
         <div className="cookies">
@@ -49,6 +51,7 @@ const App = () => {
             <Route exact path="työgalleria" element={<Gallery />} />
             {/* <Route exact path="nettisivut" element={<Websites />}></Route> */}
             <Route exact path="materiaalit" element={<Materials />} />
+            <Route exact path="yhteystiedot" element={<Contact/>}/>
             <Route path="*" element={<NoPage />} />
           </Routes>
         </div>

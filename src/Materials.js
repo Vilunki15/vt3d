@@ -37,7 +37,7 @@ const Materials = () => {
             <h2>MSLA-tekniikan materiaalit:</h2>
             <p>Asteikko 1-5</p>
             { resinTable }
-{/*             <h3>Käytämme seuraavien brändien materiaaleja:</h3>
+{/*         <h3>Käytämme seuraavien brändien materiaaleja:</h3>
             <ul>
                 <li>3DJake</li>
                 <li>Anycubic</li>
