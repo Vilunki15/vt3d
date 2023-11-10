@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="footer-container">
                     <ul>
                         <li className="footer-item">VT3D</li>
-                        <li>Sähköposti: ville@vtd.fi</li>
+                        <li>Sähköposti: ville@vt3d.fi</li>
                         <li className="footer-item">Website made with React.js</li>
                     </ul>
                 </div>
